@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Qr = require("../modules/createQr");
 
+
 router.get("/base64", async (req, res) => {
   const userData = req.query;
   const qrBase64 = await new Qr(userData);
