@@ -96,6 +96,15 @@ Generates a QR code and returns it as a PNG image.
     }
     ```
 
+**Query:**
+
+```
+?text= Simple text of qrcode
+?size= Size in px (Ex. 500) // Max 1000
+?foregroundcolor= foreground color in HEX
+?backgroundcolor= background color in HEX
+```
+
 ## Examples
 
 ### Generating Base64 QR Code
@@ -103,8 +112,9 @@ Generates a QR code and returns it as a PNG image.
 **Request:**
 
 ```bash
-GET /base64?data=Hello%20World
+GET /base64?text=Hello%20World
 ```
+
 
 **Response:**
 
@@ -120,7 +130,7 @@ GET /base64?data=Hello%20World
 **Request:**
 
 ```bash
-GET /img?data=Hello%20World
+GET /img?text=Hello%20World
 ```
 
 **Response:**
